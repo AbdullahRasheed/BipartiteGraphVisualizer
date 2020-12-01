@@ -59,7 +59,6 @@ public class Visualization {
                 currentTextPoint = currentPoint;
                 current = main.getConnections().get(currentPoint).iterator();
                 main.selection = currentPoint;
-                System.out.println(main.selection);
             }
         }
 
@@ -74,9 +73,9 @@ public class Visualization {
     private boolean isBipartite(){
         for (Integer a : main.getConnections().keySet()) {
             for (Integer b : main.getConnections().get(a)) {
-                if(classification.get(a) == classification.get(b)) return true;
+                if(classification.get(a) == classification.get(b)) return false;
             }
         }
-        return false;
+        return true;
     }
 }

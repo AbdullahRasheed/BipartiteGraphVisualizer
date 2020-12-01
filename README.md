@@ -1,2 +1,3 @@
 # Bipartite Graph Visualizer (BETA)
-[![](http://img.youtube.com/vi/2Ii0wi3JOdw/0.jpg)](http://www.youtube.com/watch?v=2Ii0wi3JOdw "Beta Bipartite Graph Visualizer")
+### Quick video demonstration below
+[![Beta Bipartite Graph Visualizer](https://img.youtube.com/vi/eCMhub-tt_8/0.jpg)](https://youtu.be/eCMhub-tt_8)

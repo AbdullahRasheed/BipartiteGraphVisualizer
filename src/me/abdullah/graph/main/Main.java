@@ -43,7 +43,7 @@ public class Main extends Canvas implements Runnable {
         try{
             thread.join();
             running = false;
-        }catch (InterruptedException e){ //Beta version of my Bipartite visualizer
+        }catch (InterruptedException e){
             e.printStackTrace();
         }
     }
@@ -114,8 +114,8 @@ public class Main extends Canvas implements Runnable {
 
         if(vis){
             int id = visualization.visualize(g);
-            if(id == 1) s = "This graph is Bipartite";
-            else if(id == 0) s = "This graph is Two Colorable";
+            if(id == 1) s = "This graph is Bipartite/Two Colorable";
+            else if(id == 0) s = "This graph is Not Bipartite/Two Colorable";
         }
 
         g.setFont(font);
