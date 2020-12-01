@@ -59,6 +59,7 @@ public class Visualization {
                 currentTextPoint = currentPoint;
                 current = main.getConnections().get(currentPoint).iterator();
                 main.selection = currentPoint;
+                System.out.println(main.selection);
             }
         }
 

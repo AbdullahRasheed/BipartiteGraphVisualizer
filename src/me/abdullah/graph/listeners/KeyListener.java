@@ -14,6 +14,8 @@ public class KeyListener extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        if(main.vis) return;
+
         if(e.getKeyCode() == KeyEvent.VK_Z && e.isControlDown()){
             main.undo();
             main.s = "";

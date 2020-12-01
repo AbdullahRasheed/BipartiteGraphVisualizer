@@ -43,7 +43,7 @@ public class Main extends Canvas implements Runnable {
         try{
             thread.join();
             running = false;
-        }catch (InterruptedException e){
+        }catch (InterruptedException e){ //Beta version of my Bipartite visualizer
             e.printStackTrace();
         }
     }
@@ -132,6 +132,7 @@ public class Main extends Canvas implements Runnable {
     }
 
     public void removePoint(Ellipse2D.Double point){
+        connections.remove(points.indexOf(point));
         points.remove(point);
     }
 
@@ -157,8 +158,10 @@ public class Main extends Canvas implements Runnable {
             removePoint((Ellipse2D.Double)obj);
         }else if(obj instanceof String){
             String[] s = ((String)obj).split(" ");
-            removeConnection(Integer.parseInt(s[0]), Integer.parseInt(s[1]));
-            removeConnection(Integer.parseInt(s[1]), Integer.parseInt(s[0]));
+            int p1 = Integer.parseInt(s[0]);
+            int p2 = Integer.parseInt(s[1]);
+            removeConnection(p1, p2);
+            removeConnection(p2, p1);
             lines.remove(lines.size()-1);
         }
     }

@@ -15,6 +15,8 @@ public class MouseListener extends MouseAdapter {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if(main.vis) return;
+
         for (int i = 0; i < main.getPoints().size(); i++) {
             Ellipse2D.Double point = main.getPoints().get(i);
             if(point.contains(e.getX(), e.getY())){
@@ -35,6 +37,8 @@ public class MouseListener extends MouseAdapter {
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        if(main.vis) return;
+
         MouseMotionListener.movable = null;
     }
 }
